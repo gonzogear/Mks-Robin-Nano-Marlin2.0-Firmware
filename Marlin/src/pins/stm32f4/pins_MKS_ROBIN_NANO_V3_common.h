@@ -23,7 +23,7 @@
 #pragma once
 
 //
-// MKS Robin Nano V3, MKS Eagle, MKS NANO6 pinmap, 
+// MKS Robin Nano V3, MKS Eagle, MKS NANO6 pinmap,
 //
 
 // #define MKS_TEST
@@ -309,7 +309,7 @@
   #define TOUCH_MOSI_PIN             EXP2_05_PIN  // SPI1_MOSI
 
   #define LCD_READ_ID                       0xD3
-  
+
   #define LCD_USE_DMA_SPI
 
   #define TFT_BUFFER_SIZE                  14400
@@ -383,7 +383,7 @@
 #endif // HAS_WIRED_LCD
 
 #if ANY(TFT_COLOR_UI, TFT_LVGL_UI, TFT_CLASSIC_UI, HAS_WIRED_LCD)
-  #define BEEPER_PIN                 EXP1_10_PIN
+  //#define BEEPER_PIN                 EXP1_10_PIN
   #define BTN_EN1                    EXP2_08_PIN
   #define BTN_EN2                    EXP2_06_PIN
   #define BTN_ENC                    EXP1_09_PIN

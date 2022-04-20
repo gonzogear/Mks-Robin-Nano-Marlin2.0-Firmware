@@ -255,7 +255,7 @@ void GcodeSuite::G28() {
   TERN_(PROBE_MANUALLY, g29_in_progress = false);
 
   // Disable leveling before homing
-  TERN_(HAS_LEVELING, set_bed_leveling_enabled(false));
+  TERN_(HAS_LEVELING, set_bed_leveling_enabled(true));
 
   // Reset to the XY plane
   TERN_(CNC_WORKSPACE_PLANES, workspace_plane = PLANE_XY);
@@ -549,7 +549,7 @@ void GcodeSuite::G28() {
       L64xxManager.set_param((L64XX_axis_t)cv, L6470_ABS_POS, stepper.position(L64XX_axis_xref[cv]));
     }
   #endif
-  
+
   #if ENABLED(AUTO_BED_LEVELING_BILINEAR)
   set_bed_leveling_enabled(true);
   #endif
