@@ -64,15 +64,15 @@ static void event_handler(lv_obj_t *obj, lv_event_t event) {
     case ID_P_ADD: {
       if (uiCfg.curTempType == 0) {
 
-        #if ANY(WATCH_TEMP_INCREASE, WATCH_BED_TEMP_INCREASE)
+
         int16_t max_target;
-        #endif
-        
+
+
         thermalManager.temp_hotend[uiCfg.extruderIndex].target += uiCfg.stepHeat;
 #ifdef WATCH_TEMP_INCREASE
         if (uiCfg.extruderIndex == 0){
             max_target = HEATER_0_MAXTEMP - (WATCH_TEMP_INCREASE + TEMP_HYSTERESIS + 1);
-          
+
         }
         else {
           #if HAS_MULTI_HOTEND
@@ -203,7 +203,7 @@ void disp_add_dec() {
 void lv_draw_preHeat() {
 #ifndef USE_NEW_LVGL_CONF
   scr = lv_screen_create(PRE_HEAT_UI);
-#else 
+#else
   mks_ui.src_main = lv_set_scr_id_title(mks_ui.src_main, PRE_HEAT_UI, "");
 #endif
   // Create image buttons
@@ -245,7 +245,7 @@ void lv_draw_preHeat() {
 #else
   tempText1 = lv_label_create_empty(mks_ui.src_main);
 #endif
-  
+
   lv_obj_set_style(tempText1, &tft_style_label_rel);
   disp_desire_temp();
 }
