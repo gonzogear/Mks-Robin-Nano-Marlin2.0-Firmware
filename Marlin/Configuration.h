@@ -601,9 +601,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp 46.26
-    #define DEFAULT_Ki 6.22
-    #define DEFAULT_Kd 86.04
+    #define DEFAULT_Kp 10.13
+    #define DEFAULT_Ki .58
+    #define DEFAULT_Kd 44.58
   #endif
 #endif // PIDTEMP
 
@@ -865,7 +865,7 @@
 #define Z_DRIVER_TYPE  TMC2209
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
-//#define Z2_DRIVER_TYPE A4988
+#define Z2_DRIVER_TYPE TMC2209
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
 //#define I_DRIVER_TYPE  A4988
